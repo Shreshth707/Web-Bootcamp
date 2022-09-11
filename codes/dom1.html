@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body >
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th><th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="productContent">
+        </tbody>
+    </table>
+
+    <script>
+    var products = [
+    {"id":1,"name":"iPhone","price":124447.44,"category" : "mobile"},
+    {"id":2,"name":"Onida","price":4444.44,"category" : "tv"},
+    {"id":3,"name":"OnePlus 6","price":98444.44,"category" : "mobile"},
+    {"id":4,"name":"HDMI connector","price":2444.00,"category" : "computer"},
+    {"id":5,"name":"Samsung","price":68000.00,"category" : "tv"}];
+
+    var tbody = document.getElementById("productContent");
+
+    products.forEach(p => {
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.innerText = p.name;
+        tr.appendChild(td);
+        td = document.createElement("td");
+        td.innerText = p.price;
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+    });
+    </script>
+
+</body>
+
+</html>
